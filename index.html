@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Good Life Guide — The Art of Living Well</title>
+<meta name="description" content="Curated luxury living. Exceptional products, refined experiences, and the art of living without compromise.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-486684955"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-486684955');
+  </script>
+<style>
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 5rem 6rem 6rem;
+  position: relative;
+}
+.hero-left::after {
+  content: '';
+  position: absolute;
+  top: 15%; left: -80px;
+  width: 160px; height: 160px;
+  border: 1px solid var(--gold-pale);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--obsidian);
+  margin-bottom: 2rem;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-body {
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--stone);
+  max-width: 380px;
+  line-height: 1.9;
+  margin-bottom: 3rem;
+}
+.hero-actions { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+.hero-right {
+  background: var(--obsidian);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-ornament {
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18rem;
+  font-weight: 300;
+  color: rgba(201,169,110,0.05);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-stats {
+  position: relative;
+  text-align: center;
+  padding: 3rem;
+}
+.hero-stat { margin-bottom: 3rem; }
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+.hero-stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mist);
+  display: block;
+  margin-top: 0.5rem;
+}
+.hero-divider {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.4), transparent);
+  margin: 0 auto 3rem;
+}
+
+/* CATEGORIES */
+.cat-section { background: var(--ivory); padding: 8rem 5rem; }
+.cat-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.cat-item {
+  background: var(--ivory);
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: background 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+.cat-item:hover { background: var(--cream); }
+.cat-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.cat-item:hover::after { transform: scaleX(1); }
+.cat-roman {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.cat-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--obsidian);
+  line-height: 1.2;
+}
+.cat-desc {
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--mist);
+  line-height: 1.7;
+}
+
+/* PHILOSOPHY */
+.philosophy-section {
+  background: var(--obsidian);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  padding: 10rem 6rem;
+}
+.philosophy-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3.8rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.25;
+  color: var(--ivory);
+}
+.philosophy-quote em { font-style: normal; color: var(--gold); }
+.philosophy-quote cite {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mist);
+  font-style: normal;
+  margin-top: 2rem;
+}
+.tenets { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.tenet {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.tenet:last-child { border-bottom: none; }
+.tenet-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 28px;
+}
+.tenet h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  margin-bottom: 0.5rem;
+}
+.tenet p {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 8rem 2.5rem 4rem; }
+  .cat-section { padding: 5rem 2rem; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .cat-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .philosophy-section { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 3rem; }
+}
+@media (max-width: 600px) {
+  .cat-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">The Good <span>Life</span> Guide</a>
+  <ul class="nav-links">
+    <li><a href="dining.html">Dining</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="style.html">Style</a></li>
+    <li><a href="spirits.html">Spirits</a></li>
+    <li><a href="wellness.html">Wellness</a></li>
+    <li><a href="interiors.html">Interiors</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="#membership" class="nav-cta">Join the Circle</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow fade-up">The Art of Living Well</p>
+    <h1 class="hero-title fade-up-2">
+      Live Well.<br>
+      Choose <em>Better.</em><br>
+      Never Settle.
+    </h1>
+    <p class="hero-body fade-up-3">For those who understand that quality is never an expense — it is an investment. Curated products, refined experiences, and the art of living without compromise.</p>
+    <div class="hero-actions fade-up-3">
+      <a href="#collections" class="btn-primary">Explore Collections</a>
+      <a href="#philosophy" class="btn-ghost">Our Philosophy</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-ornament">G</div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">8</span>
+        <span class="hero-stat-label">Curated Collections</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">∞</span>
+        <span class="hero-stat-label">Standards Upheld</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">0</span>
+        <span class="hero-stat-label">Compromises Made</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Fine Dining</span><span class="sep">·</span><span>Private Travel</span><span class="sep">·</span><span>Bespoke Style</span><span class="sep">·</span><span>Rare Spirits</span><span class="sep">·</span><span>Wellness & Longevity</span><span class="sep">·</span><span>Bespoke Interiors</span><span class="sep">·</span><span>Art & Culture</span><span class="sep">·</span><span>The Art of Gifting</span><span class="sep">·</span>
+    <span>Fine Dining</span><span class="sep">·</span><span>Private Travel</span><span class="sep">·</span><span>Bespoke Style</span><span class="sep">·</span><span>Rare Spirits</span><span class="sep">·</span><span>Wellness & Longevity</span><span class="sep">·</span><span>Bespoke Interiors</span><span class="sep">·</span><span>Art & Culture</span><span class="sep">·</span><span>The Art of Gifting</span><span class="sep">·</span>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+<section class="cat-section" id="collections">
+  <div class="cat-header">
+    <div>
+      <p class="section-label">The Collections</p>
+      <h2 class="section-title">Eight Worlds of<br><em>Exceptional</em> Living</h2>
+    </div>
+    <p class="section-body">Each collection is curated not by algorithm, but by taste. We consider provenance, craftsmanship, and one singular question: does it make life more beautiful?</p>
+  </div>
+
+  <div class="cat-grid">
+    <a class="cat-item" href="dining.html">
+      <span class="cat-roman">I</span>
+      <span class="cat-name">Fine Dining</span>
+      <span class="cat-desc">Reserve tables, exceptional kitchenware, and the principles of the elevated meal.</span>
+    </a>
+    <a class="cat-item" href="travel.html">
+      <span class="cat-roman">II</span>
+      <span class="cat-name">Private Travel</span>
+      <span class="cat-desc">First-class experiences, boutique properties, and journeys that become stories.</span>
+    </a>
+    <a class="cat-item" href="style.html">
+      <span class="cat-roman">III</span>
+      <span class="cat-name">Bespoke Style</span>
+      <span class="cat-desc">Investment pieces, heritage brands, and the art of dressing with intention.</span>
+    </a>
+    <a class="cat-item" href="spirits.html">
+      <span class="cat-roman">IV</span>
+      <span class="cat-name">Rare Spirits</span>
+      <span class="cat-desc">Single malts, aged vintages, and the fine barware that honors them.</span>
+    </a>
+    <a class="cat-item" href="wellness.html">
+      <span class="cat-roman">V</span>
+      <span class="cat-name">Wellness & Longevity</span>
+      <span class="cat-desc">Premium protocols, serious skincare, and the body as a lifelong project.</span>
+    </a>
+    <a class="cat-item" href="interiors.html">
+      <span class="cat-roman">VI</span>
+      <span class="cat-name">Bespoke Interiors</span>
+      <span class="cat-desc">Natural materials, considered objects, and spaces designed to endure.</span>
+    </a>
+    <a class="cat-item" href="art.html">
+      <span class="cat-roman">VII</span>
+      <span class="cat-name">Art & Culture</span>
+      <span class="cat-desc">Collecting, attending, and living within the world of ideas and beauty.</span>
+    </a>
+    <a class="cat-item" href="gifting.html">
+      <span class="cat-roman">VIII</span>
+      <span class="cat-name">The Art of Gifting</span>
+      <span class="cat-desc">Gifts that are felt, not forgotten. Objects that communicate attention.</span>
+    </a>
+  </div>
+</section>
+
+<!-- AI DAILY INSIGHT -->
+<section style="background:var(--cream);padding:7rem 6rem" id="insight">
+  <div style="max-width:800px;margin:0 auto">
+    <p class="section-label">Today's Insight</p>
+    <h2 class="section-title">The Good Life <em>Perspective</em></h2>
+    <button class="btn-refresh" onclick="refreshInsight()">↻ New Perspective</button>
+    <div id="home-insight"></div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy-section" id="philosophy">
+  <div>
+    <p class="section-label" style="color:var(--gold-pale)">The Standard</p>
+    <blockquote class="philosophy-quote">
+      "Quality is remembered long after <em>price</em> is forgotten."
+      <cite>— The Good Life Guide Standard</cite>
+    </blockquote>
+  </div>
+  <ul class="tenets">
+    <li class="tenet">
+      <span class="tenet-num">I</span>
+      <div><h4>Provenance Matters</h4><p>We trace every recommendation to its origin. The story behind an object is inseparable from its value.</p></div>
+    </li>
+    <li class="tenet">
+      <span class="tenet-num">II</span>
+      <div><h4>Buy Once, Buy Right</h4><p>True luxury is not extravagance — it is the wisdom to invest in quality once rather than replace mediocrity repeatedly.</p></div>
+    </li>
+    <li class="tenet">
+      <span class="tenet-num">III</span>
+      <div><h4>Curated, Not Aggregated</h4><p>Every product earns its place. We do not list — we select. The difference is everything.</p></div>
+    </li>
+    <li class="tenet">
+      <span class="tenet-num">IV</span>
+      <div><h4>Experience Over Accumulation</h4><p>The finest life is composed of experiences that endure in memory, not possessions that gather dust.</p></div>
+    </li>
+  </ul>
+</section>
+
+<!-- MEMBERSHIP -->
+<section class="email-strip" id="membership">
+  <h2>Join the <em>Inner Circle</em></h2>
+  <p>First access to curated finds, private discoveries, and editorial content reserved for those who appreciate the finest things. No noise — only what is worth your attention.</p>
+  <form class="email-form" onsubmit="handleEmail(event)">
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit">Request Access</button>
+  </form>
+  <p class="email-note" id="form-status">By invitation. Your details are never shared.</p>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">The Good <span>Life</span> Guide</div>
+    <div class="footer-tagline">The Art of Living Well</div>
+  </div>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="affiliate.html">Affiliate</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© The Good Life Guide 2025 — Mattpom Digital Ventures LLC. All Rights Reserved. Some links are affiliate links — we earn a commission on qualifying purchases at no extra cost to you.</p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function refreshInsight() {
+  loadAIContent('home-insight', 'Fine Dining Luxury Living', '');
+}
+refreshInsight();
+</script>
+</body>
+</html>

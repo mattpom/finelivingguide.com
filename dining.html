@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Dining — The Good Life Guide</title>
+<meta name="description" content="Elevating every meal. From the perfectly equipped kitchen to the restaurant worth the reservation.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-486684955"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-486684955');
+  </script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">The Good <span>Life</span> Guide</a>
+  <ul class="nav-links">
+    <li><a href="dining.html">Dining</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="style.html">Style</a></li>
+    <li><a href="spirits.html">Spirits</a></li>
+    <li><a href="wellness.html">Wellness</a></li>
+    <li><a href="interiors.html">Interiors</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="index.html#membership" class="nav-cta">Join the Circle</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero fade-up">
+  <p class="eyebrow">The Exceptional Table</p>
+  <h1>Fine <em>Dining</em></h1>
+  <p>Elevating every meal. From the perfectly equipped kitchen to the restaurant worth the reservation.</p>
+</div>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Fine Dining</span><span class="sep">·</span><span>Reserve Restaurants</span><span class="sep">·</span><span>Cast Iron</span><span class="sep">·</span><span>Japanese Knives</span><span class="sep">·</span><span>Wine Pairing</span><span class="sep">·</span><span>Mise en Place</span><span class="sep">·</span><span>The Perfect Sear</span><span class="sep">·</span><span>Copper Cookware</span><span class="sep">·</span><span>Tasting Menus</span><span class="sep">·</span><span>Michelin Stars</span><span class="sep">·</span>
+    <span>Fine Dining</span><span class="sep">·</span><span>Reserve Restaurants</span><span class="sep">·</span><span>Cast Iron</span><span class="sep">·</span><span>Japanese Knives</span><span class="sep">·</span><span>Wine Pairing</span><span class="sep">·</span><span>Mise en Place</span><span class="sep">·</span><span>The Perfect Sear</span><span class="sep">·</span><span>Copper Cookware</span><span class="sep">·</span><span>Tasting Menus</span><span class="sep">·</span><span>Michelin Stars</span><span class="sep">·</span>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <div style="margin-bottom:3rem">
+    <p class="section-label">Curated Intelligence</p>
+    <h2 class="section-title">Fine <em>Refined</em></h2>
+    <button class="btn-refresh" onclick="refresh_dining()">↻ New Perspective</button>
+    <div id="dining-content"></div>
+  </div>
+
+  <div style="margin-bottom:1rem">
+  <p class="section-label">Curated Selection</p>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Objects of <em>Distinction</em></h2>
+  <div class="product-grid">
+    <a class="product-card" href="https://www.amazon.com/s?k=le+creuset+dutch+oven&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Cookware</span>
+      <span class="product-name">Le Creuset Signature Dutch Oven</span>
+      <span class="product-desc">The French original. Built to last generations, develop character with every use, and elevate the simplest ingredients.</span>
+      <span class="product-price">From $280</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=shun+classic+chefs+knife&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Cutlery</span>
+      <span class="product-name">Shun Classic Chef's Knife</span>
+      <span class="product-desc">Japanese craftsmanship. VG-MAX steel that holds an edge. The knife that changes how you understand cutting.</span>
+      <span class="product-price">From $145</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=mauviel+copper+skillet&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Cookware</span>
+      <span class="product-name">Mauviel M'Heritage Copper Skillet</span>
+      <span class="product-desc">Unmatched heat distribution. The cookware of professional French kitchens — and those who cook as they do.</span>
+      <span class="product-price">From $220</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=coravin+wine+system&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Bar</span>
+      <span class="product-name">Coravin Wine System</span>
+      <span class="product-desc">Pour a glass from any bottle without opening it. The technology that finally solved the opened wine problem.</span>
+      <span class="product-price">From $299</span>
+      <span class="product-link">Explore →</span>
+    </a>
+  </div>
+  <p class="affiliate-note">As an Amazon Associate, The Good Life Guide earns from qualifying purchases.</p>
+</div>
+
+  <div style="margin-bottom:4rem">
+  <p class="section-label">Continue Exploring</p>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Further <em>Refinements</em></h2>
+  <div class="card-grid">
+    <a class="card" href="spirits.html">
+      <span class="card-roman">I</span>
+      <span class="card-title">Rare Spirits</span>
+      <span class="card-body">The bar that complements the table. Fine spirits, proper glassware, and the art of the cocktail.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+    <a class="card" href="travel.html">
+      <span class="card-roman">II</span>
+      <span class="card-title">Private Travel</span>
+      <span class="card-body">The world's great dining destinations, and how to reach them properly.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+    <a class="card" href="shop.html">
+      <span class="card-roman">III</span>
+      <span class="card-title">The Shop</span>
+      <span class="card-body">Every curated product recommendation in one considered collection.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+  </div>
+</div>
+
+</div>
+
+<section class="email-strip" id="membership">
+  <h2>Join the <em>Inner Circle</em></h2>
+  <p>First access to curated finds, private discoveries, and editorial content reserved for those who appreciate the finest things. No noise — only what is worth your attention.</p>
+  <form class="email-form" onsubmit="handleEmail(event)">
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit">Request Access</button>
+  </form>
+  <p class="email-note" id="form-status">By invitation. Your details are never shared.</p>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">The Good <span>Life</span> Guide</div>
+    <div class="footer-tagline">The Art of Living Well</div>
+  </div>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="affiliate.html">Affiliate</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© The Good Life Guide 2025 — Mattpom Digital Ventures LLC. All Rights Reserved. Some links are affiliate links — we earn a commission on qualifying purchases at no extra cost to you.</p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function refresh_dining() {
+  loadAIContent('dining-content', 'Fine Dining & The Exceptional Kitchen', '');
+}
+refresh_dining();
+</script>
+</body>
+</html>

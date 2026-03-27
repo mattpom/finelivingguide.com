@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rare Spirits — The Good Life Guide</title>
+<meta name="description" content="Single malts, aged vintages, and the barware that honors them. The bar as an extension of taste.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-486684955"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-486684955');
+  </script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">The Good <span>Life</span> Guide</a>
+  <ul class="nav-links">
+    <li><a href="dining.html">Dining</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="style.html">Style</a></li>
+    <li><a href="spirits.html">Spirits</a></li>
+    <li><a href="wellness.html">Wellness</a></li>
+    <li><a href="interiors.html">Interiors</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="index.html#membership" class="nav-cta">Join the Circle</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero fade-up">
+  <p class="eyebrow">The Considered Bar</p>
+  <h1>Rare <em>Spirits</em></h1>
+  <p>Single malts, aged vintages, and the barware that honors them. The bar as an extension of taste.</p>
+</div>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Single Malt</span><span class="sep">·</span><span>Aged Bourbon</span><span class="sep">·</span><span>Crystal Glassware</span><span class="sep">·</span><span>The Perfect Ice</span><span class="sep">·</span><span>Small Batch</span><span class="sep">·</span><span>Independent Bottlers</span><span class="sep">·</span><span>Cocktail Craft</span><span class="sep">·</span><span>The Home Bar</span><span class="sep">·</span><span>Decanting</span><span class="sep">·</span><span>Tasting Notes</span><span class="sep">·</span>
+    <span>Single Malt</span><span class="sep">·</span><span>Aged Bourbon</span><span class="sep">·</span><span>Crystal Glassware</span><span class="sep">·</span><span>The Perfect Ice</span><span class="sep">·</span><span>Small Batch</span><span class="sep">·</span><span>Independent Bottlers</span><span class="sep">·</span><span>Cocktail Craft</span><span class="sep">·</span><span>The Home Bar</span><span class="sep">·</span><span>Decanting</span><span class="sep">·</span><span>Tasting Notes</span><span class="sep">·</span>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <div style="margin-bottom:3rem">
+    <p class="section-label">Curated Intelligence</p>
+    <h2 class="section-title">Rare <em>Refined</em></h2>
+    <button class="btn-refresh" onclick="refresh_spirits()">↻ New Perspective</button>
+    <div id="spirits-content"></div>
+  </div>
+
+  <div style="margin-bottom:1rem">
+  <p class="section-label">Curated Selection</p>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Objects of <em>Distinction</em></h2>
+  <div class="product-grid">
+    <a class="product-card" href="https://www.amazon.com/s?k=riedel+single+malt+whisky+glass&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Glassware</span>
+      <span class="product-name">Riedel Single Malt Whisky Glass</span>
+      <span class="product-desc">Engineered to deliver single malt precisely to the palate. The difference between a glass and a tool for tasting.</span>
+      <span class="product-price">From $95</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=cocktail+kingdom+bar+set&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Bar Tools</span>
+      <span class="product-name">Cocktail Kingdom Bar Set</span>
+      <span class="product-desc">Professional-grade Japanese jiggers, bar spoons, and strainers. The tools that transform home mixing into craft.</span>
+      <span class="product-price">From $130</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=large+format+clear+ice+mold&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Ice</span>
+      <span class="product-name">Wintersmiths Ice Chest</span>
+      <span class="product-desc">Large format, crystal clear ice that melts slowly and dilutes precisely. The detail that separates the serious bar.</span>
+      <span class="product-price">From $89</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=waterford+lismore+decanter&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Decanting</span>
+      <span class="product-name">Waterford Lismore Crystal Decanter</span>
+      <span class="product-desc">Hand-blown Irish crystal that refracts light beautifully. The decanter that transforms the ritual of an evening pour.</span>
+      <span class="product-price">From $195</span>
+      <span class="product-link">Explore →</span>
+    </a>
+  </div>
+  <p class="affiliate-note">As an Amazon Associate, The Good Life Guide earns from qualifying purchases.</p>
+</div>
+
+  <div style="margin-bottom:4rem">
+  <p class="section-label">Continue Exploring</p>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Further <em>Refinements</em></h2>
+  <div class="card-grid">
+    <a class="card" href="dining.html">
+      <span class="card-roman">I</span>
+      <span class="card-title">Fine Dining</span>
+      <span class="card-body">The table that complements the bar. Food worth pairing.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+    <a class="card" href="interiors.html">
+      <span class="card-roman">II</span>
+      <span class="card-title">Bespoke Interiors</span>
+      <span class="card-body">The bar as a room. Designing the space around the ritual.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+    <a class="card" href="shop.html">
+      <span class="card-roman">III</span>
+      <span class="card-title">The Shop</span>
+      <span class="card-body">Every curated recommendation in one considered collection.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+  </div>
+</div>
+
+</div>
+
+<section class="email-strip" id="membership">
+  <h2>Join the <em>Inner Circle</em></h2>
+  <p>First access to curated finds, private discoveries, and editorial content reserved for those who appreciate the finest things. No noise — only what is worth your attention.</p>
+  <form class="email-form" onsubmit="handleEmail(event)">
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit">Request Access</button>
+  </form>
+  <p class="email-note" id="form-status">By invitation. Your details are never shared.</p>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">The Good <span>Life</span> Guide</div>
+    <div class="footer-tagline">The Art of Living Well</div>
+  </div>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="affiliate.html">Affiliate</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© The Good Life Guide 2025 — Mattpom Digital Ventures LLC. All Rights Reserved. Some links are affiliate links — we earn a commission on qualifying purchases at no extra cost to you.</p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function refresh_spirits() {
+  loadAIContent('spirits-content', 'Rare Spirits & The Fine Bar', '');
+}
+refresh_spirits();
+</script>
+</body>
+</html>

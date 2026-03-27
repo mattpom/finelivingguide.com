@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bespoke Interiors — The Good Life Guide</title>
+<meta name="description" content="Natural materials. Considered objects. Spaces designed not to impress guests but to reward the people who live in them.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-486684955"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-486684955');
+  </script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">The Good <span>Life</span> Guide</a>
+  <ul class="nav-links">
+    <li><a href="dining.html">Dining</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="style.html">Style</a></li>
+    <li><a href="spirits.html">Spirits</a></li>
+    <li><a href="wellness.html">Wellness</a></li>
+    <li><a href="interiors.html">Interiors</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="index.html#membership" class="nav-cta">Join the Circle</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero fade-up">
+  <p class="eyebrow">Spaces That Reward Living In</p>
+  <h1>Bespoke <em>Interiors</em></h1>
+  <p>Natural materials. Considered objects. Spaces designed not to impress guests but to reward the people who live in them.</p>
+</div>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Natural Materials</span><span class="sep">·</span><span>Statement Lighting</span><span class="sep">·</span><span>Linen & Cashmere</span><span class="sep">·</span><span>Solid Hardwood</span><span class="sep">·</span><span>The Right Rug</span><span class="sep">·</span><span>Artisan Ceramics</span><span class="sep">·</span><span>Scent as Design</span><span class="sep">·</span><span>Bespoke Furniture</span><span class="sep">·</span><span>The Anchor Piece</span><span class="sep">·</span><span>Books as Decor</span><span class="sep">·</span>
+    <span>Natural Materials</span><span class="sep">·</span><span>Statement Lighting</span><span class="sep">·</span><span>Linen & Cashmere</span><span class="sep">·</span><span>Solid Hardwood</span><span class="sep">·</span><span>The Right Rug</span><span class="sep">·</span><span>Artisan Ceramics</span><span class="sep">·</span><span>Scent as Design</span><span class="sep">·</span><span>Bespoke Furniture</span><span class="sep">·</span><span>The Anchor Piece</span><span class="sep">·</span><span>Books as Decor</span><span class="sep">·</span>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <div style="margin-bottom:3rem">
+    <p class="section-label">Curated Intelligence</p>
+    <h2 class="section-title">Bespoke <em>Refined</em></h2>
+    <button class="btn-refresh" onclick="refresh_interiors()">↻ New Perspective</button>
+    <div id="interiors-content"></div>
+  </div>
+
+  <div style="margin-bottom:1rem">
+  <p class="section-label">Curated Selection</p>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Objects of <em>Distinction</em></h2>
+  <div class="product-grid">
+    <a class="product-card" href="https://www.amazon.com/s?k=boll+branch+sheet+set&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Textiles</span>
+      <span class="product-name">Boll & Branch Signature Hemmed Sheet Set</span>
+      <span class="product-desc">Fair Trade certified, 100% organic cotton that softens with every wash. The sheet set that makes hotel beds feel ordinary.</span>
+      <span class="product-price">From $268</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=visual+comfort+table+lamp&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Lighting</span>
+      <span class="product-name">Visual Comfort Studio Table Lamp</span>
+      <span class="product-desc">Lighting that creates atmosphere rather than illumination. The difference between a room and a space worth inhabiting.</span>
+      <span class="product-price">From $295</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=diptyque+baies+large+candle&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Fragrance</span>
+      <span class="product-name">Diptyque Baies Large Candle</span>
+      <span class="product-desc">The candle that defines a home's sensory identity. The scent that guests associate with you before they see the rooms.</span>
+      <span class="product-price">From $90</span>
+      <span class="product-link">Explore →</span>
+    </a>
+    <a class="product-card" href="https://www.amazon.com/s?k=full+grain+leather+desk+tray&tag=brokemodelife-20" target="_blank" rel="noopener sponsored">
+      <span class="product-category">Storage</span>
+      <span class="product-name">Waterworks Leather Tray Collection</span>
+      <span class="product-desc">Full-grain leather organization for surfaces worth looking at. The object that signals that every detail has been considered.</span>
+      <span class="product-price">From $145</span>
+      <span class="product-link">Explore →</span>
+    </a>
+  </div>
+  <p class="affiliate-note">As an Amazon Associate, The Good Life Guide earns from qualifying purchases.</p>
+</div>
+
+  <div style="margin-bottom:4rem">
+  <p class="section-label">Continue Exploring</p>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Further <em>Refinements</em></h2>
+  <div class="card-grid">
+    <a class="card" href="art.html">
+      <span class="card-roman">I</span>
+      <span class="card-title">Art & Culture</span>
+      <span class="card-body">The work on the walls. Collecting as a practice of attention.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+    <a class="card" href="spirits.html">
+      <span class="card-roman">II</span>
+      <span class="card-title">Rare Spirits</span>
+      <span class="card-body">The home bar as a room. Designing the ritual space.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+    <a class="card" href="shop.html">
+      <span class="card-roman">III</span>
+      <span class="card-title">The Shop</span>
+      <span class="card-body">Every curated recommendation collected in one place.</span>
+      <span class="card-tag">Explore →</span>
+    </a>
+  </div>
+</div>
+
+</div>
+
+<section class="email-strip" id="membership">
+  <h2>Join the <em>Inner Circle</em></h2>
+  <p>First access to curated finds, private discoveries, and editorial content reserved for those who appreciate the finest things. No noise — only what is worth your attention.</p>
+  <form class="email-form" onsubmit="handleEmail(event)">
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit">Request Access</button>
+  </form>
+  <p class="email-note" id="form-status">By invitation. Your details are never shared.</p>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">The Good <span>Life</span> Guide</div>
+    <div class="footer-tagline">The Art of Living Well</div>
+  </div>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="affiliate.html">Affiliate</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© The Good Life Guide 2025 — Mattpom Digital Ventures LLC. All Rights Reserved. Some links are affiliate links — we earn a commission on qualifying purchases at no extra cost to you.</p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function refresh_interiors() {
+  loadAIContent('interiors-content', 'Luxury Interiors & Home Design', '');
+}
+refresh_interiors();
+</script>
+</body>
+</html>
