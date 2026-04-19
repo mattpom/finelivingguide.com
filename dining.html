@@ -797,6 +797,17 @@ footer {
   .product-grid { grid-template-columns: 1fr; }
 }
 
+
+  .related-articles { max-width:1100px; margin:0 auto; padding:3rem 4rem 5rem; border-top:1px solid var(--border); }
+  .related-label { font-size:0.68rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--obsidian); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+  .related-label::after { content:''; flex:1; height:1px; background:var(--border); }
+  .related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+  .related-card { background:var(--ivory); padding:1.5rem; text-decoration:none; display:flex; flex-direction:column; gap:0.5rem; transition:background 0.2s; }
+  .related-card:hover { background:var(--cream); }
+  .related-card-title { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:400; color:var(--obsidian); line-height:1.3; }
+  .related-card-desc { font-size:0.75rem; color:var(--stone); font-weight:300; line-height:1.5; flex:1; }
+  .related-card-link { font-size:0.62rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
+  @media(max-width:768px) { .related-articles { padding:2rem 1.5rem; } .related-grid { grid-template-columns:1fr; } }
 </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMRR29Y66F"></script>
@@ -921,6 +932,36 @@ footer {
   <p class="email-note" id="form-status">By invitation. Your details are never shared.</p>
 </section>
 
+<div class="related-articles">
+  <div class="related-label">From the Journal</div>
+  <div class="related-grid">
+    <a href="best-steakhouses-america.html" class="related-card">
+      <div class="related-card-title">The Finest Steakhouses in America Worth the Drive</div>
+      <div class="related-card-desc">Dry-aged beef, proper martinis, creamed spinach. The American steakhouse at its best.</div>
+      <span class="related-card-link">Read →</span>
+    </a>
+    <a href="fine-dining-chicago.html" class="related-card">
+      <div class="related-card-title">The Best Fine Dining in Chicago Worth the Reservation</div>
+      <div class="related-card-desc">Alinea, Smyth, Oriole, Everest. Chicago's finest rooms, ranked honestly.</div>
+      <span class="related-card-link">Read →</span>
+    </a>
+    <a href="a-day-in-san-sebastian.html" class="related-card">
+      <div class="related-card-title">A Day in San Sebastián</div>
+      <div class="related-card-desc">More Michelin stars per capita than any city on Earth. A perfect day in the Basque Country.</div>
+      <span class="related-card-link">Read →</span>
+    </a>
+    <a href="the-truth-about-fugu.html" class="related-card">
+      <div class="related-card-title">The Truth About Fugu: Japan's Most Dangerous Delicacy</div>
+      <div class="related-card-desc">The preparation, the poison, the restaurants. The world's most dangerous fish, properly explained.</div>
+      <span class="related-card-link">Read →</span>
+    </a>
+    <a href="canned-seafood-luxury.html" class="related-card">
+      <div class="related-card-title">The Rising Art of Canned Seafood</div>
+      <div class="related-card-desc">The tin is not a compromise. Why the finest conservas deserve a place at any serious table.</div>
+      <span class="related-card-link">Read →</span>
+    </a>
+  </div>
+</div>
 <footer>
   <div>
     <div class="footer-logo">The Fine <span>Living</span> Guide</div>

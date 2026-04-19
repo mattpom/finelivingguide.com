@@ -797,6 +797,26 @@ footer {
   .product-grid { grid-template-columns: 1fr; }
 }
 
+
+  .journal-wrap { max-width:900px; margin:0 auto; padding:4rem 4rem 6rem; }
+  .featured-article { border:1px solid var(--border); padding:2.5rem; margin-bottom:3rem; background:var(--cream); }
+  .feat-label { font-size:0.6rem; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+  .feat-link { text-decoration:none; display:block; }
+  .feat-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3vw,2.5rem); font-weight:300; color:var(--obsidian); line-height:1.2; margin-bottom:0.8rem; }
+  .feat-desc { font-size:0.88rem; color:var(--stone); font-weight:300; line-height:1.8; margin-bottom:1rem; }
+  .feat-read { font-size:0.68rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); }
+  .journal-category { margin-bottom:3rem; }
+  .cat-header { display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem; }
+  .cat-label { font-size:0.68rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--obsidian); }
+  .cat-header::after { content:''; flex:1; height:1px; background:var(--border); }
+  .article-list { display:flex; flex-direction:column; gap:1px; background:var(--border); border:1px solid var(--border); }
+  .article-row { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; padding:1.2rem 1.5rem; background:var(--ivory); text-decoration:none; transition:background 0.2s; }
+  .article-row:hover { background:var(--cream); }
+  .article-row-content { flex:1; }
+  .article-row-title { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:400; color:var(--obsidian); margin-bottom:0.3rem; line-height:1.3; }
+  .article-row-desc { font-size:0.75rem; color:var(--stone); font-weight:300; line-height:1.5; }
+  .article-row-arrow { color:var(--gold); font-size:0.9rem; flex-shrink:0; }
+  @media(max-width:768px) { .journal-wrap { padding:2.5rem 1.5rem 4rem; } }
 </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMRR29Y66F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WMRR29Y66F');</script>
