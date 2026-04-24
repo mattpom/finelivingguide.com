@@ -1296,11 +1296,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── EMAIL ────────────────────────────────────────────────────
-function handleEmail(e) {
+async function handleEmail(e) {
   e.preventDefault();
+  const email = e.target.querySelector('input[type="email"]').value.trim();
   const status = document.getElementById('form-status');
-  if (status) status.textContent = '✦ Welcome to the Circle. You will hear from us.';
-  e.target.reset();
+  if (!email) return;
+  status.textContent = 'Joining...';
+  try {
+    const res = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': 'BREVO_API_KEY_PLACEHOLDER'
+      },
+      body: JSON.stringify({
+        email: email,
+        listIds: [FLG_LIST_ID_PLACEHOLDER],
+        updateEnabled: true,
+        attributes: { SOURCE: 'FLG Website' }
+      })
+    });
+    if (res.ok || res.status === 204) {
+      status.textContent = '✦ Welcome to the Circle. You will hear from us.';
+      e.target.reset();
+    } else {
+      throw new Error('API error');
+    }
+  } catch(err) {
+    status.textContent = 'Something went wrong. Please try again.';
+  }
 }
 
 // ── LUXURY CONTENT BANKS ─────────────────────────────────────
