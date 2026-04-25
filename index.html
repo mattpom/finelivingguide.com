@@ -10,7 +10,9 @@
   <meta property="og:url" content="https://finelivingguide.com/">
   <meta property="og:title" content="Fine Living Guide — The Art of Fine Living">
   <meta property="og:description" content="Curated luxury living. Exceptional products, refined experiences, and the art of living without compromise.">
-  <meta property="og:site_name" content="Fine Living Guide">
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@finelivingguide">
+<meta property="og:site_name" content="Fine Living Guide">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Fine Living Guide — The Art of Fine Living","description":"Curated luxury living. Exceptional products, refined experiences, and the art of living without compromise.","url":"https://finelivingguide.com/","publisher":{"@type":"Organization","name":"Fine Living Guide","url":"https://finelivingguide.com"}}
   </script>
@@ -797,6 +799,23 @@ footer {
   .product-grid { grid-template-columns: 1fr; }
 }
 
+
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000;
+    background: var(--obsidian); border-top: 1px solid rgba(201,169,110,0.3);
+    padding: 1rem 2rem; display: flex; align-items: center;
+    justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .cookie-banner p { font-size: 0.75rem; color: var(--mist); line-height: 1.5; flex: 1; }
+  .cookie-banner a { color: var(--gold); text-decoration: none; }
+  .cookie-accept {
+    background: var(--gold); color: var(--obsidian); border: none;
+    padding: 0.5rem 1.4rem; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+    white-space: nowrap; transition: opacity 0.2s; flex-shrink: 0;
+  }
+  .cookie-accept:hover { opacity: 0.85; }
 </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMRR29Y66F"></script>
@@ -1613,5 +1632,11 @@ refreshInsight();
   })();
   </script>
   <!-- End Enhanced GA4 Event Tracking -->
+
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies for analytics and affiliate tracking. By continuing to use this site you accept our <a href="privacy.html">Privacy Policy</a>.</p>
+  <button class="cookie-accept" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookieAccepted','1')">Accept</button>
+</div>
+<script>if(localStorage.getItem('cookieAccepted'))document.getElementById('cookieBanner').style.display='none';</script>
 </body>
 </html>
