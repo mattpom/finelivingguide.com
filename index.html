@@ -1327,11 +1327,11 @@ async function handleEmail(e) {
   if (!email) return;
   status.textContent = 'Joining...';
   try {
-    const res = await fetch('https://api.brevo.com/v3/contacts', {
+    const res = await fetch('https://formspree.io/f/xeojgywb', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'api-key': 'BREVO_API_KEY_PLACEHOLDER'
+        'Accept': 'application/json'
       },
       body: JSON.stringify({
         email: email,
