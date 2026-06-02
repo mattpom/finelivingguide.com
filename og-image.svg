@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1814"/>
+      <stop offset="100%" style="stop-color:#0d0c0a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a96e"/>
+      <stop offset="50%" style="stop-color:#e8cc90"/>
+      <stop offset="100%" style="stop-color:#c9a96e"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Gold accent bars -->
+  <rect width="1200" height="2" fill="url(#gold)"/>
+  <rect y="628" width="1200" height="2" fill="url(#gold)"/>
+  <!-- Decorative gold border lines -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#c9a96e" stroke-width="1" opacity="0.2"/>
+  <rect x="50" y="50" width="1100" height="530" fill="none" stroke="#c9a96e" stroke-width="0.5" opacity="0.1"/>
+  <!-- Gold star decorations -->
+  <text x="100" y="130" font-family="serif" font-size="28" fill="#c9a96e" opacity="0.6">✦</text>
+  <text x="1070" y="130" font-family="serif" font-size="28" fill="#c9a96e" opacity="0.6">✦</text>
+  <text x="100" y="540" font-family="serif" font-size="28" fill="#c9a96e" opacity="0.6">✦</text>
+  <text x="1070" y="540" font-family="serif" font-size="28" fill="#c9a96e" opacity="0.6">✦</text>
+  <!-- Main title -->
+  <text x="600" y="240" font-family="Georgia, serif" font-size="72" font-weight="400" fill="url(#gold)" letter-spacing="8" text-anchor="middle">FINE LIVING</text>
+  <text x="600" y="330" font-family="Georgia, serif" font-size="72" font-weight="400" fill="#faf8f3" letter-spacing="8" text-anchor="middle">GUIDE</text>
+  <!-- Horizontal decorative line -->
+  <line x1="300" y1="365" x2="900" y2="365" stroke="#c9a96e" stroke-width="1" opacity="0.5"/>
+  <text x="600" y="358" font-family="serif" font-size="18" fill="#c9a96e" text-anchor="middle" opacity="0.8">✦</text>
+  <!-- Tagline -->
+  <text x="600" y="420" font-family="Georgia, serif" font-size="22" fill="#c9a96e" letter-spacing="6" text-anchor="middle" opacity="0.8">THE ART OF FINE LIVING</text>
+  <!-- URL -->
+  <text x="600" y="540" font-family="Arial, sans-serif" font-size="18" fill="#c9a96e" letter-spacing="3" text-anchor="middle" opacity="0.5">finelivingguide.com</text>
+</svg>
