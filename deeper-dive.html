@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deeper Dive -- The Fine Living Guide</title>
+  <link rel="canonical" href="https://finelivingguide.com/deeper-dive.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://finelivingguide.com/deeper-dive.html">
+  <meta property="og:title" content="Deeper Dive -- The Fine Living Guide">
+  <meta property="og:description" content="More finds, more visual inspiration -- the deeper dive behind The Fine Living Guide.">
+  <meta property="og:site_name" content="Fine Living Guide">
+  <meta name="description" content="More finds, more visual inspiration -- the deeper dive behind The Fine Living Guide.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root {
+    --ivory:     #faf8f3;
+    --cream:     #f2ede3;
+    --parchment: #e8e0d0;
+    --gold:      #c9a96e;
+    --gold-dim:  #b8935a;
+    --gold-pale: #e8d5b0;
+    --obsidian:  #1a1814;
+  --charcoal:  #2c2a26;
+  --stone:     #6b6560;
+  --mist:      #9e9890;
+  --border:    #ddd8cc;
+    }
+html { scroll-behavior: smooth; }
+body {
+    background: var(--ivory);
+  color: var(--obsidian);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+nav {
+    position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 4rem;
+  background: rgba(250,248,243,0.94);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  gap: 1rem;
+}
+.nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--obsidian);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+    display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+  .nav-links a.active { color: var(--gold); }
+.page-hero {
+    padding: 9rem 4rem 3.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.eyebrow {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1.2rem;
+}
+.page-title {
+    font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.6rem,5.5vw,4.5rem);
+  line-height: 1.05;
+  color: var(--obsidian);
+  margin-bottom: 1.2rem;
+}
+.page-title em { font-style: italic; color: var(--gold-dim); }
+.page-sub {
+    font-size: 1rem;
+  color: var(--stone);
+  max-width: 600px;
+  line-height: 1.8;
+}
+.main-wrap { max-width: 900px; margin: 0 auto; padding: 3.5rem 4rem 5rem; }
+.section { margin-bottom: 2.5rem; }
+.section h2 {
+    font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: var(--obsidian);
+  margin-bottom: 0.8rem;
+}
+.section p {
+    font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.pin-embed-wrap {
+    background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  margin-top: 1.5rem;
+  min-height: 200px;
+}
+footer {
+    background: var(--charcoal);
+  border-top: 1px solid rgba(201,169,110,0.15);
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+.footer-logo span { color: var(--gold); }
+.footer-tagline {
+    font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-top: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+.footer-links a {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mist);
+  text-decoration: none;
+}
+.footer-copy {
+    width: 100%;
+  font-size: 0.62rem;
+  color: var(--mist);
+  margin-top: 1rem;
+}
+@media(max-width:900px){.nav-links{display:none}}
+</style>
+  </head>
+  <body>
+  <nav>
+  <a href="index.html" class="nav-logo">The Fine <span>Living</span> Guide</a>
+  <ul class="nav-links">
+  <li><a href="dining.html">Dining</a></li>
+  <li><a href="art.html">Art</a></li>
+  <li><a href="travel.html">Travel</a></li>
+  <li><a href="style.html">Style</a></li>
+  <li><a href="spirits.html">Spirits</a></li>
+  <li><a href="wellness.html">Wellness</a></li>
+  <li><a href="interiors.html">Interiors</a></li>
+  <li><a href="cribs.html">Cribs</a></li>
+  <li><a href="shop.html">Shop</a></li>
+  <li><a href="journal.html">Journal</a></li>
+  <li><a href="deeper-dive.html" class="active">Deeper Dive</a></li><li><a href="#membership" class="nav-cta">Join the Circle</a></li>
+  </ul>
+  </nav>
+  <header class="page-hero">
+  <p class="eyebrow">More To See</p>
+<h1 class="page-title">Deeper <em>Dive</em></h1>
+<p class="page-sub">The visual side of The Fine Living Guide -- finds, inspiration, and extras pulled straight from a living Pinterest board.</p>
+</header>
+<div class="main-wrap">
+<div class="section">
+<h2>What This Is</h2>
+<p>Not every discovery fits into a single article. This page is where the extra finds live -- the images and references that inform the stories published elsewhere on this site.</p>
+  <p>It updates as new pins get added, so check back for more.</p>
+  </div>
+  <div class="section">
+  <h2>The Board</h2>
+  <div class="pin-embed-wrap">
+  <a data-pin-do="embedUser" href="https://www.pinterest.com/luxmodestudio/" data-pin-board-width="900" data-pin-scale-height="240" data-pin-scale-width="80"></a>
+  </div>
+  </div>
+  </div>
+  <footer>
+  <div>
+  <div class="footer-logo">The Fine <span>Living</span> Guide</div>
+<div class="footer-tagline">The Art of Fine Living</div>
+</div>
+<div class="footer-links">
+<a href="terms.html">Terms</a>
+<a href="privacy.html">Privacy</a>
+  <a href="affiliate.html">Affiliate</a>
+  <a href="cookie.html">Cookie</a>
+  <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">&copy; Fine Living Guide 2026 -- Mattpom Digital Ventures LLC. All Rights Reserved.</p>
+  </footer>
+  <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
+  </body>
+  </html>
