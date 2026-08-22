@@ -1095,7 +1095,7 @@ footer {
     <li><a href="style.html">Style</a></li>
     <li><a href="spirits.html">Spirits</a></li>
     <li><a href="wellness.html">Wellness</a></li>
-    <li><a href="interiors.html">Interiors</a></li>
+    <li><a href="interiors.html">Interiors</a></li><li><a href="gifting.html">Gifting</a></li>
     <li><a href="cribs.html">Cribs</a></li>
     <li><a href="shop.html">Shop</a></li>
     <li><a href="journal.html">Journal</a></li>
@@ -1349,36 +1349,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── EMAIL ────────────────────────────────────────────────────
-async function handleEmail(e) {
-  e.preventDefault();
-  const email = e.target.querySelector('input[type="email"]').value.trim();
-  const status = document.getElementById('form-status');
-  if (!email) return;
-  status.textContent = 'Joining...';
-  try {
-    const res = await fetch('https://formspree.io/f/xeojgywb', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        email: email,
-        listIds: [FLG_LIST_ID_PLACEHOLDER],
-        updateEnabled: true,
-        attributes: { SOURCE: 'FLG Website' }
-      })
-    });
-    if (res.ok || res.status === 204) {
-      status.textContent = '✦ Welcome to the Circle. You will hear from us.';
-      e.target.reset();
-    } else {
-      throw new Error('API error');
-    }
-  } catch(err) {
-    status.textContent = 'Something went wrong. Please try again.';
-  }
-}
+// The "Join the Inner Circle" form below submits natively to Brevo
+// (see its action="" attribute) — no JS handler needed or used here.
 
 // ── LUXURY CONTENT BANKS ─────────────────────────────────────
 const CONTENT = {

@@ -817,7 +817,7 @@ footer {
     <li><a href="style.html">Style</a></li>
     <li><a href="spirits.html">Spirits</a></li>
     <li><a href="wellness.html">Wellness</a></li>
-    <li><a href="interiors.html">Interiors</a></li>
+    <li><a href="interiors.html">Interiors</a></li><li><a href="gifting.html">Gifting</a></li>
     <li><a href="cribs.html">Cribs</a></li>
     <li><a href="shop.html">Shop</a></li>
     <li><a href="journal.html">Journal</a></li>
@@ -914,8 +914,10 @@ footer {
 <section class="email-strip" id="membership">
   <h2>Join the <em>Inner Circle</em></h2>
   <p>First access to curated finds, private discoveries, and editorial content reserved for those who appreciate the finest things. No noise — only what is worth your attention.</p>
-  <form class="email-form" onsubmit="handleEmail(event)">
-    <input type="email" placeholder="Your email address" required>
+  <form class="email-form" action="https://179420ee.sibforms.com/serve/MUIFANOhzi1hsRLYxVOTOMITCpRZNAhuJTsN4doKeB2fU6k_K2vXH4FeSdUejlJW5k9u2n0mVu_fLneU6_02wBhOyWmCjSoTQT9XO-Io5Se6kuZFphCnbPsu9wbwXFZkwBaq_78IgcSWUR9IXuqJ4Kt8lBnzj-OUmjXa-pZhwfjouqS1uO055YHRyngrFajQ8LznT5NC-XR7K7aUdg==" method="POST" target="_blank">
+    <input type="email" name="EMAIL" placeholder="Your email address" required autocomplete="email">
+    <input type="text" name="email_address_check" value="" style="display:none">
+    <input type="hidden" name="locale" value="en">
     <button type="submit">Request Access</button>
   </form>
   <p class="email-note" id="form-status">By invitation. Your details are never shared.</p>
