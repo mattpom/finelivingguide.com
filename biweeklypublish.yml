@@ -1,0 +1,80 @@
+name: Bi-Weekly Content Publisher
+
+on:
+  schedule:
+    - cron: '0 9 * * 4/14'
+  workflow_dispatch:
+
+jobs:
+  publish-draft:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Find and publish draft
+        run: |
+          if ! ls _drafts/*.html > /dev/null 2>&1; then
+            echo "::warning::No drafts found in _drafts/ - add next article before scheduled run"
+            exit 0
+          fi
+          DRAFT=$(ls _drafts/*.html | sort | head -1)
+          DRAFT_NAME=$(basename "$DRAFT")
+          cp "$DRAFT" "$DRAFT_NAME"
+          rm "$DRAFT"
+          TITLE=$(grep -oP '(?<=<title>)[^<]+' "$DRAFT_NAME" | sed "s/ — Fine.*//")
+          TODAY=$(date +"%B %-d, %Y")
+          TODAY_ISO=$(date +"%Y-%m-%d")
+          echo "Publishing: $DRAFT_NAME | $TITLE | $TODAY"
+
+          # NOTE: journal.html is intentionally NOT touched here. Its "FLG Originals"
+          # section is hand-curated and uses different CSS classes than this workflow
+          # ever generated (card-roman/card-title/card-body/card-tag, not
+          # card__body/card__meta/card__title/card__cta), so the old injection step
+          # never applied cleanly. Update journal.html manually when needed.
+
+          # Update archive.html - insert after the stable marker (idempotent, always
+          # lands the newest entry directly below the marker = newest-first order).
+          # Uses a literal arrow character instead of the &rarr; HTML entity because
+          # & is a sed replacement-text special character (means "the whole match")
+          # and previously corrupted the file when used as replacement text.
+          if [ -f archive.html ]; then
+            ENTRY="<a href=\"$DRAFT_NAME\" class=\"article-row\">\n<div class=\"row-content\"><div class=\"row-cat\">Fine Living<\/div><div class=\"row-title\">$TITLE<\/div><div class=\"row-date\">$TODAY<\/div><\/div>\n<div class=\"row-arrow\">→<\/div>\n<\/a>"
+            # Escape any literal "&" in the entry so sed doesn't treat it as "whole match"
+            ENTRY_SAFE=$(printf '%s' "$ENTRY" | sed -e 's/&/\\\&/g')
+            if grep -q '<!-- ARCHIVE_INSERT_POINT -->' archive.html; then
+              sed -i "s|<!-- ARCHIVE_INSERT_POINT -->|<!-- ARCHIVE_INSERT_POINT -->\n$ENTRY_SAFE|" archive.html
+            else
+              echo "::error::ARCHIVE_INSERT_POINT marker not found in archive.html - skipping to avoid corrupting the file. Add the marker back manually."
+            fi
+          fi
+
+          # Update sitemap.xml - insert new URL before closing tag
+          if [ -f sitemap.xml ]; then
+            NEW_URL="  <url>\n    <loc>https:\/\/finelivingguide.com\/$DRAFT_NAME<\/loc>\n    <changefreq>monthly<\/changefreq>\n    <priority>0.9<\/priority>\n  <\/url>"
+            sed -i "s|<\/urlset>|$NEW_URL\n<\/urlset>|" sitemap.xml
+            sed -i "s|finelivingguide.com/index.html|finelivingguide.com/|g" sitemap.xml
+          fi
+
+          # Update or create feed.xml RSS feed. Titles are XML-escaped (raw & is
+          # invalid in XML text), and the whole entry is sed-escaped before use as
+          # replacement text for the same reason as the archive.html entry above.
+          TITLE_XML=$(printf '%s' "$TITLE" | sed 's/&/\&amp;/g')
+          FEED_ENTRY="    <item>\n      <title>$TITLE_XML</title>\n      <link>https://finelivingguide.com/$DRAFT_NAME</link>\n      <pubDate>$(date -R)</pubDate>\n      <guid>https://finelivingguide.com/$DRAFT_NAME</guid>\n    </item>"
+          FEED_ENTRY_SAFE=$(printf '%s' "$FEED_ENTRY" | sed -e 's/&/\\\&/g')
+          if [ -f feed.xml ]; then
+            sed -i "s|<\/channel>|$FEED_ENTRY_SAFE\n  <\/channel>|" feed.xml
+          else
+            printf '%s\n' '<?xml version="1.0" encoding="UTF-8"?>' '<rss version="2.0">' '  <channel>' '    <title>The Fine Living Guide — Journal</title>' '    <link>https://finelivingguide.com</link>' '    <description>The art of fine living. Curated editorial on dining, spirits, style, and the good life.</description>' '    <language>en-us</language>' > feed.xml
+            echo -e "$FEED_ENTRY" >> feed.xml
+            printf '%s\n' '  </channel>' '</rss>' >> feed.xml
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Bi-weekly publish: $DRAFT_NAME [$TODAY_ISO]"
+          git push
