@@ -829,6 +829,17 @@ footer {
 .page-hero::before{opacity:.18!important}
 @media(max-width:700px){.page-hero{min-height:480px;padding:7rem 2rem 3rem!important;background-position:center!important}}
 </style>
+
+<style id="journal-originals-imagery">
+#flg-originals .card-grid{align-items:stretch}
+#flg-originals .journal-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+#flg-originals .journal-card::after{display:none}
+#flg-originals .journal-card-image{width:100%;height:190px;object-fit:cover;display:block;filter:saturate(.82) contrast(.96);transition:transform .55s ease,filter .55s ease}
+#flg-originals .journal-card:hover .journal-card-image{transform:scale(1.025);filter:saturate(.95) contrast(1)}
+#flg-originals .journal-card-copy{padding:1.8rem 2rem 2rem;display:flex;flex-direction:column;flex:1}
+#flg-originals .journal-card .card-tag{margin-top:auto;padding-top:1.2rem}
+@media(max-width:700px){#flg-originals .journal-card-image{height:220px}}
+</style>
 </head>
 <body>
 <nav>
@@ -881,29 +892,59 @@ footer {
 <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;color:var(--obsidian);margin-bottom:0.5rem;">Written by <em style="font-style:italic;color:var(--gold)">The Guide</em></h2>
 <p style="font-size:0.8rem;color:var(--stone);letter-spacing:0.06em;margin-bottom:3rem;">Original essays and perspectives published bi-weekly. <a href="archive.html" style="color:var(--gold);text-decoration:none">View full archive &rarr;</a></p>
 <div class="card-grid" style="margin-bottom:1.5rem">
-<a href="best-cognac-worth-buying.html" class="card">
-<span class="card-roman">Spirits &middot; May 2026</span>
+<a href="best-cognac-worth-buying.html" class="card journal-card">
+<img class="journal-card-image" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=82" alt="A crystal glass of amber cognac" loading="lazy">
+<span class="journal-card-copy">
+<span class="card-roman">Spirits · Original</span>
 <span class="card-title">The Best Cognac Worth Buying</span>
-<p class="card-body">The cognacs that justify their price &mdash; and why the category rewards patience, study, and a willingness to ignore the obvious bottles.</p>
+<span class="card-body">The cognacs that justify their price — and why the category rewards patience, study, and a willingness to ignore the obvious bottles.</span>
 <span class="card-tag">Read &rarr;</span>
+</span>
 </a>
-<a href="how-to-dress-like-old-money.html" class="card">
-<span class="card-roman">Style &middot; May 2026</span>
-<span class="card-title">How to Dress Like Old Money</span>
-<p class="card-body">The principles behind a wardrobe that communicates taste without announcing itself &mdash; understated, enduring, and always correct.</p>
+<a href="the-art-worth-owning.html" class="card journal-card">
+<img class="journal-card-image" src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=82" alt="Contemporary artwork displayed in a gallery" loading="lazy">
+<span class="journal-card-copy">
+<span class="card-roman">Art · Original</span>
+<span class="card-title">The Art Worth Owning</span>
+<span class="card-body">How to recognize work with lasting presence — and build a collection guided by conviction rather than fashion.</span>
 <span class="card-tag">Read &rarr;</span>
+</span>
 </a>
-<a href="dress-with-money-style-guide.html" class="card">
-<span class="card-roman">Style &middot; March 2026</span>
-<span class="card-title">How to Dress with Money</span>
-<p class="card-body">The style principles behind the wardrobe that outlasts every trend &mdash; and the pieces that justify their price over a lifetime.</p>
+<a href="furniture-worth-buying-once.html" class="card journal-card">
+<img class="journal-card-image" src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=900&q=82" alt="A sculptural designer chair in a refined interior" loading="lazy">
+<span class="journal-card-copy">
+<span class="card-roman">Interiors · Original</span>
+<span class="card-title">Furniture Worth Buying Once</span>
+<span class="card-body">The pieces that reward decades of use, improve with age, and deserve a permanent place in the room.</span>
 <span class="card-tag">Read &rarr;</span>
+</span>
 </a>
-<a href="canned-seafood-luxury.html" class="card">
-<span class="card-roman">Dining &middot; January 2026</span>
+<a href="gifts-worth-giving.html" class="card journal-card">
+<img class="journal-card-image" src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=900&q=82" alt="An elegantly wrapped gift" loading="lazy">
+<span class="journal-card-copy">
+<span class="card-roman">Gifting · Original</span>
+<span class="card-title">Gifts Worth Giving</span>
+<span class="card-body">Thoughtful objects chosen for the person, the occasion, and the pleasure of giving something genuinely memorable.</span>
+<span class="card-tag">Read &rarr;</span>
+</span>
+</a>
+<a href="recovery-tools-worth-buying.html" class="card journal-card">
+<img class="journal-card-image" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=82" alt="Wellness and recovery training equipment" loading="lazy">
+<span class="journal-card-copy">
+<span class="card-roman">Wellness · Original</span>
+<span class="card-title">Recovery Tools Worth Buying</span>
+<span class="card-body">A considered guide to the equipment that can make rest, mobility, and recovery feel like part of living well.</span>
+<span class="card-tag">Read &rarr;</span>
+</span>
+</a>
+<a href="canned-seafood-luxury.html" class="card journal-card">
+<img class="journal-card-image" src="https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=900&q=82" alt="A composed seafood dish" loading="lazy">
+<span class="journal-card-copy">
+<span class="card-roman">Dining · Original</span>
 <span class="card-title">Canned Seafood Is the New Luxury</span>
-<p class="card-body">The finest tinned fish in the world &mdash; and why the best conservas belong in every serious kitchen.</p>
+<span class="card-body">The finest tinned fish in the world — and why the best conservas belong in every serious kitchen.</span>
 <span class="card-tag">Read &rarr;</span>
+</span>
 </a>
 </div>
 <p style="text-align:center"><a href="archive.html" style="font-family:'Montserrat',sans-serif;font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--gold-pale);padding:0.8rem 2rem">View Full Article Archive</a></p>
@@ -1139,18 +1180,38 @@ const RSS_FEEDS = [
   { name: 'Condé Nast Traveler', url: 'https://www.cntraveler.com/feed/rss' },
 ];
 
+const JOURNAL_FALLBACK = [
+  {source:'Fine Living Guide',title:'The Art Worth Owning',link:'the-art-worth-owning.html',desc:'A practical philosophy for building a collection with lasting presence.',date:''},
+  {source:'Fine Living Guide',title:'Furniture Worth Buying Once',link:'furniture-worth-buying-once.html',desc:'The pieces that reward decades of use and improve with age.',date:''},
+  {source:'Fine Living Guide',title:'Gifts Worth Giving',link:'gifts-worth-giving.html',desc:'Thoughtful objects chosen for the person, the occasion, and the pleasure of giving.',date:''},
+  {source:'Fine Living Guide',title:'Recovery Tools Worth Buying',link:'recovery-tools-worth-buying.html',desc:'A considered guide to rest, mobility, and recovery.',date:''},
+  {source:'Fine Living Guide',title:'The Best Cognac Worth Buying',link:'best-cognac-worth-buying.html',desc:'The bottles that justify their price and reward patience.',date:''},
+  {source:'Fine Living Guide',title:'Canned Seafood Is the New Luxury',link:'canned-seafood-luxury.html',desc:'Why the best conservas belong in every serious kitchen.',date:''}
+];
+
+function renderJournalFeed(container, items) {
+  container.innerHTML = '<div class="blog-grid">' + items.map(item =>
+    '<a class="blog-card" href="' + item.link + '"' + (item.link.startsWith('http') ? ' target="_blank" rel="noopener"' : '') + '>' +
+    '<span class="blog-source">' + item.source + '</span>' +
+    '<span class="blog-title">' + item.title + '</span>' +
+    '<span class="blog-desc">' + item.desc + '</span>' +
+    '<span class="blog-date">' + (item.date ? new Date(item.date).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}) : 'Selected from the archive') + '</span>' +
+    '</a>'
+  ).join('') + '</div>';
+}
+
 async function loadBlogFeed(containerId, maxItems = 9) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  container.innerHTML = '<div class="ai-loading" style="padding:3rem 0">Curating the latest...</div>';
+  renderJournalFeed(container, JOURNAL_FALLBACK.slice(0, maxItems));
 
   const allItems = [];
 
   await Promise.allSettled(RSS_FEEDS.map(async feed => {
     try {
       const proxy = 'https://api.allorigins.win/get?url=' + encodeURIComponent(feed.url);
-      const res   = await fetch(proxy);
+      const res   = await fetch(proxy, { signal: AbortSignal.timeout(5000) });
       const json  = await res.json();
       const parser = new DOMParser();
       const xml   = parser.parseFromString(json.contents, 'text/xml');
@@ -1165,10 +1226,7 @@ async function loadBlogFeed(containerId, maxItems = 9) {
     } catch(e) {}
   }));
 
-  if (allItems.length === 0) {
-    container.innerHTML = '<p style="color:var(--mist);padding:2rem 0;font-family:Montserrat,sans-serif;font-size:0.75rem;letter-spacing:0.1em">The feed is resting. Return shortly.</p>';
-    return;
-  }
+  if (allItems.length === 0) return;
 
   allItems.sort(() => Math.random() - 0.5);
   const shown = allItems.slice(0, maxItems);
