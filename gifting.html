@@ -815,6 +815,10 @@ footer {
 .page-hero::before{opacity:.18!important}
 @media(max-width:700px){.page-hero{min-height:480px;padding:7rem 2rem 3rem!important;background-position:center!important}}
 </style>
+<style id="editorial-gallery-style">
+.editorial-gallery{display:grid;grid-template-columns:1.15fr .85fr;gap:1.5rem;margin:1rem 0 5rem}.editorial-gallery figure{margin:0;min-width:0}.editorial-gallery img{display:block;width:100%;height:420px;object-fit:cover}.editorial-gallery figure:nth-child(2) img{height:340px;margin-top:80px}.editorial-gallery figcaption{padding:.75rem 0;border-bottom:1px solid var(--border);font-family:'Montserrat',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist)}
+@media(max-width:700px){.editorial-gallery{grid-template-columns:1fr;gap:1.5rem;margin-bottom:3.5rem}.editorial-gallery img,.editorial-gallery figure:nth-child(2) img{height:280px;margin-top:0}}
+</style>
 </head>
 <body>
 <nav>
@@ -856,6 +860,11 @@ footer {
     <button class="btn-refresh" onclick="refresh_gifting()">↻ New Perspective</button>
     <div id="gifting-content"></div>
   </div>
+
+<section class="editorial-gallery" data-editorial-gallery="true" aria-label="Editorial photography">
+  <figure><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=84" alt="Presentation signals that the choice was deliberate" loading="lazy"><figcaption>Presentation signals that the choice was deliberate</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1481709761765-0876c08d7d26?auto=format&fit=crop&w=1200&q=84" alt="The best gift reflects the recipient rather than the giver" loading="lazy"><figcaption>The best gift reflects the recipient rather than the giver</figcaption></figure>
+</section>
 
   <div style="margin-bottom:1rem">
   <p class="section-label">Curated Selection</p>
