@@ -2,7 +2,22 @@
   document.querySelectorAll('[data-retired-affiliate="true"]').forEach(function (card) {
     card.style.cursor = 'default';
     var label = card.querySelector('.product-link');
-    if (label) label.textContent = 'Product link under review';
+    if (label) label.textContent = 'View recommendation';
+
+    // Retired affiliate placements must not continue to advertise themselves as
+    // sponsored merchant links. Preserve useful internal navigation, but remove
+    // external-tab and sponsored semantics when the destination is on this site.
+    if (card.tagName === 'A') {
+      try {
+        var destination = new URL(card.href, window.location.href);
+        if (destination.origin === window.location.origin) {
+          card.removeAttribute('target');
+          card.removeAttribute('rel');
+        }
+      } catch (e) {
+        // Leave malformed/unknown destinations untouched rather than guessing.
+      }
+    }
   });
 
   // Many legacy pages already contain their own Amazon affiliate_click handler.
