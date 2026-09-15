@@ -1,0 +1,27 @@
+{
+  "version": "2026-09-15",
+  "site": "finelivingguide.com",
+  "programs": {
+    "amazon": {
+      "network": "Amazon Associates",
+      "tracking_tag": "finelivingguide-20",
+      "status": "verified-in-existing-code",
+      "allowed_patterns": ["https://www.amazon.com/dp/", "https://www.amazon.com/gp/product/"],
+      "required_rel": "noopener sponsored",
+      "measurement_event": "affiliate_click"
+    }
+  },
+  "rules": {
+    "no_placeholder_affiliate_urls": true,
+    "no_unverified_tracking_ids": true,
+    "prefer_exact_product_pages": true,
+    "use_current_price_cta_instead_of_stale_price": true,
+    "retire_unverified_products_instead_of_guessing": true,
+    "disclosure_required_before_or_adjacent_to_commercial_modules": true
+  },
+  "notes": [
+    "Existing repository code confirms finelivingguide-20 across shop/editorial pages.",
+    "Existing affiliate-tracking.js separately records Amazon outbound clicks; normalize event naming during implementation without double-counting.",
+    "Alcohol itself is not an Amazon monetization target; spirits editorial should monetize relevant eligible accessories such as glassware/books where appropriate."
+  ]
+}
