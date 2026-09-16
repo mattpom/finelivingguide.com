@@ -20,12 +20,8 @@ Headlines use Cormorant Garamond, a serif for editorial impact. Body and UI text
 
 ## Navigation
 
-Dining, Art, Travel, Style, Spirits, Wellness, Interiors, Cribs, Shop, Journal, Deeper Dive, Join the Circle (membership call to action).
+Dining, Art, Travel, Style, Spirits, Wellness, Interiors, Cribs, Shop, Journal, Join the Circle (membership call to action).
 
 ## Layout Patterns
 
 Content is organized into eight numbered collections (I through VIII) rather than generic categories. Featured Reading cards pair a category eyebrow, a headline, and a one-line teaser with a Read More link. A stat strip uses symbols instead of plain numbers, such as an infinity mark for Standards Upheld and a zero for Compromises Made.
-
-## Deeper Dive
-
-Internal page at /deeper-dive.html, embeds the shared Pinterest profile widget. The nav link is inserted before the Join the Circle call to action on standard pages. Two legacy pages, best-cognac-worth-buying.html and how-to-dress-like-old-money.html, use slightly different nav markup and needed a custom insertion point; worth normalizing to the standard nav template if this page is ever redesigned.
