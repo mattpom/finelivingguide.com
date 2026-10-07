@@ -168,5 +168,6 @@ footer a{color:var(--gold);text-decoration:none}
 document.querySelector('.nav-toggle').addEventListener('click',function(){var n=document.querySelector('.nav-links');n.style.display=n.style.display==='flex'?'none':'flex';if(n.style.display==='flex'){n.style.position='absolute';n.style.top='100%';n.style.left='0';n.style.right='0';n.style.padding='1.5rem 2rem';n.style.background='var(--ivory)';n.style.flexDirection='column';n.style.alignItems='flex-start'}});
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a||!a.href)return;if(a.href.indexOf(location.hostname)===-1&&a.href.indexOf('http')===0){gtag('event','outbound_click',{link_url:a.href,link_text:(a.innerText||'').trim().substring(0,100),page_location:location.pathname})}});
 </script>
+<script src="revenue-paths.js" defer></script>
 </body>
 </html>

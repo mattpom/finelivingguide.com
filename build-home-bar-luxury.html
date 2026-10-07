@@ -84,6 +84,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <script src="affiliate-tracking.js" defer></script>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="revenue-paths.css">
 </head>
 <body>
 <nav>
@@ -137,27 +138,9 @@ footer a { color: var(--gold); text-decoration: none; }
     <p class="section-label">Curated Selection</p>
     <h2 class="section-title">Objects of <em>Distinction</em></h2>
     <div class="product-grid">
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Barware</span>
-      <span class="product-name">Crystal Whisky Decanter Set</span>
-      <span class="product-desc">Lead-free crystal with matching glasses. The kind that sits out permanently.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Bar Tools</span>
-      <span class="product-name">Yarai Mixing Glass & Bar Set</span>
-      <span class="product-desc">The professional standard. Heavy, balanced, produces properly diluted cocktails.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Ice</span>
-      <span class="product-name">Clear Ice System</span>
-      <span class="product-desc">Because cloudy ice is the tell of a home bar that doesn't quite care enough.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
+    <a class="product-card" href="shop.html" data-revenue-link="guide" data-position="current-guide"><span class="product-category overline">Buying guide</span><h3 class="product-name">Browse the current collection</h3><p class="product-desc">Specific product links, with current prices shown by the retailer.</p><span class="product-link gear-link">Read the guide</span></a>
+
+
     </div>
     <p class="affiliate-note">Affiliate links — we earn a small commission at no extra cost to you. We only recommend what we'd actually buy.</p>
   </div>
@@ -245,5 +228,6 @@ footer a { color: var(--gold); text-decoration: none; }
   })();
   </script>
   <!-- End Enhanced GA4 Event Tracking -->
+<script src="revenue-paths.js" defer></script>
 </body>
 </html>

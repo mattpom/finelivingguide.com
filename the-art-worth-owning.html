@@ -87,6 +87,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <script src="affiliate-tracking.js" defer></script>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="revenue-paths.css">
 </head>
 <body>
 <nav>
@@ -155,27 +156,9 @@ footer a { color: var(--gold); text-decoration: none; }
     <p class="section-label">Curated Selection</p>
     <h2 class="section-title">Objects of <em>Distinction</em></h2>
     <div class="product-grid">
-      <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-        <span class="product-category">Framing</span>
-        <span class="product-name">Archival Museum-Glass Frame</span>
-        <span class="product-desc">UV-filtering glass and acid-free matting. Protects the piece you actually paid attention to.</span>
-        <span class="product-price">Check current pricing</span>
-        <span class="product-link">Explore →</span>
-      </a>
-      <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-        <span class="product-category">Library</span>
-        <span class="product-name">Taschen XL Monograph</span>
-        <span class="product-desc">The oversized art books that teach you what to look for before you spend real money.</span>
-        <span class="product-price">Check current pricing</span>
-        <span class="product-link">Explore →</span>
-      </a>
-      <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-        <span class="product-category">Lighting</span>
-        <span class="product-name">LED Gallery Picture Light</span>
-        <span class="product-desc">The difference between art that's displayed and art that's just hung on a wall.</span>
-        <span class="product-price">Check current pricing</span>
-        <span class="product-link">Explore →</span>
-      </a>
+      <a class="product-card" href="shop.html" data-revenue-link="guide" data-position="current-guide"><span class="product-category overline">Buying guide</span><h3 class="product-name">Browse the current collection</h3><p class="product-desc">Specific product links, with current prices shown by the retailer.</p><span class="product-link gear-link">Read the guide</span></a>
+
+
     </div>
     <p class="affiliate-note">Affiliate links — we earn a small commission at no extra cost to you. We only recommend what we'd actually buy.</p>
   </div>
@@ -232,5 +215,6 @@ footer a { color: var(--gold); text-decoration: none; }
   })();
   </script>
   <!-- End Enhanced GA4 Event Tracking -->
+<script src="revenue-paths.js" defer></script>
 </body>
 </html>

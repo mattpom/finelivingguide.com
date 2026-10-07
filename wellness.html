@@ -821,6 +821,7 @@ footer {
 </style>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="revenue-paths.css">
 </head>
 <body>
 <nav>
@@ -872,34 +873,10 @@ footer {
   <p class="section-label">Curated Selection</p>
   <h2 class="section-title" style="margin-bottom:1.5rem">Objects of <em>Distinction</em></h2>
   <div class="product-grid">
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Skincare</span>
-      <span class="product-name">La Mer Crème de la Mer</span>
-      <span class="product-desc">Twelve years of research. The legendary moisturizer born from Miracle Broth. The standard by which premium skincare is measured.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Recovery</span>
-      <span class="product-name">Theragun Pro Percussion Device</span>
-      <span class="product-desc">The recovery tool used by professional athletes and serious practitioners. Percussive therapy that actually moves the needle.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Sleep</span>
-      <span class="product-name">Eight Sleep Pod Cover</span>
-      <span class="product-desc">Temperature-regulated sleep. The technology that tracks, optimizes, and transforms the most important health intervention available.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Fitness</span>
-      <span class="product-name">Peloton Tread Treadmill</span>
-      <span class="product-desc">Commercial-grade build quality for the home. The equipment that eliminates the excuse and raises the standard of the daily practice.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
+    <a class="product-card" href="shop.html" data-revenue-link="guide" data-position="current-guide"><span class="product-category overline">Buying guide</span><h3 class="product-name">Browse the current collection</h3><p class="product-desc">Specific product links, with current prices shown by the retailer.</p><span class="product-link gear-link">Read the guide</span></a>
+
+
+
   </div>
   <p class="affiliate-note">As an Amazon Associate, Fine Living Guide earns from qualifying purchases.</p>
 </div>
@@ -1254,5 +1231,6 @@ refresh_wellness();
   })();
   </script>
   <!-- End Enhanced GA4 Event Tracking -->
+<script src="revenue-paths.js" defer></script>
 </body>
 </html>

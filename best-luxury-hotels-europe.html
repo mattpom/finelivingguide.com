@@ -84,6 +84,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <script src="affiliate-tracking.js" defer></script>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="revenue-paths.css">
 </head>
 <body>
 <nav>
@@ -137,27 +138,9 @@ footer a { color: var(--gold); text-decoration: none; }
     <p class="section-label">Curated Selection</p>
     <h2 class="section-title">Objects of <em>Distinction</em></h2>
     <div class="product-grid">
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Travel</span>
-      <span class="product-name">Premium Packing System</span>
-      <span class="product-desc">Because how you arrive matters as much as where you stay.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Travel Comfort</span>
-      <span class="product-name">Cashmere Travel Blanket</span>
-      <span class="product-desc">First class comfort regardless of where you're sitting.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
-    <a class="product-card" data-retired-affiliate="true" aria-disabled="true">
-      <span class="product-category">Accessories</span>
-      <span class="product-name">Full-Grain Leather Passport Holder</span>
-      <span class="product-desc">The document deserves a better home than your back pocket.</span>
-      <span class="product-price">Check current pricing</span>
-      <span class="product-link">Explore →</span>
-    </a>
+    <a class="product-card" href="shop.html" data-revenue-link="guide" data-position="current-guide"><span class="product-category overline">Buying guide</span><h3 class="product-name">Browse the current collection</h3><p class="product-desc">Specific product links, with current prices shown by the retailer.</p><span class="product-link gear-link">Read the guide</span></a>
+
+
       <a class="product-card" href="https://www.booking.com/searchresults.html?ss=Paris+Luxury+Hotels&amp;nflt=review_score%3D90" target="_blank" rel="noopener noreferrer" data-affiliate-status="editorial">
         <span class="product-category">Hotels</span>
         <span class="product-name">Luxury Hotels in Paris</span>
@@ -266,5 +249,6 @@ footer a { color: var(--gold); text-decoration: none; }
   })();
   </script>
   <!-- End Enhanced GA4 Event Tracking -->
+<script src="revenue-paths.js" defer></script>
 </body>
 </html>
