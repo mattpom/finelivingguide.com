@@ -217,7 +217,7 @@ footer a { color:var(--gold); text-decoration:none; }
       var form = e.target;
       var emailInput = form.querySelector('input[type="email"]');
       if (emailInput) {
-        gtag('event', 'email_signup', {
+        gtag('event', 'newsletter_signup_attempt', {
           'form_id': form.id || form.action || 'unknown',
           'page_location': window.location.pathname
         });
